@@ -11,9 +11,9 @@ class App extends Component {
             <Router>
                 <Fragment>
                     <nav>
-                        <Link to="/">Take Me Home!</Link>
-                        <Link to="/FilmPage">Show Me Films!</Link>
-                        <Link to="/PeoplePage">Show Me People!</Link>
+                        <Link to="/"><button>Take Me Home!</button></Link>
+                        <Link to="/FilmPage"><button>Show Me Films!</button></Link>
+                        <Link to="/PeoplePage"><button>Show Me People!</button></Link>
                     </nav>
                     <Switch>
                         <Route exact path="/" component={LandingPage} />

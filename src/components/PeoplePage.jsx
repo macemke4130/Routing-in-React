@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
 class PeoplePage extends Component {
-    constructor() {
-        super();
-    }
-
     render() {
         return (
-            <h1>People Page!</h1>
+            <>
+                <div className="nav-fix"></div>
+                <h1>People Page!</h1>
+            </>
         )
     }
 }
