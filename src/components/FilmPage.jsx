@@ -23,11 +23,12 @@ class FilmPage extends Component {
     }
 
     render() {
-        const flick = this.state.filmList.map((flick) => flick);
         return (
             <>
                 <div className="nav-fix"></div>
-                <FilmCard filmList={flick} />
+                <div className="row justify-content-center">
+                    <FilmCard filmList={this.state.filmList} />
+                </div>
             </>
         )
     }

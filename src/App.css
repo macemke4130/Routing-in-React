@@ -8,14 +8,15 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 2rem;
+    height: 3rem;
     width: 100vw;
-    background-color: darkred;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
+    z-index: 666;
 }
 
 a {
@@ -27,7 +28,7 @@ button {
 }
 
 .nav-fix {
-    height: 2rem;
+    height: 3rem;
 }
 
 .landing {
