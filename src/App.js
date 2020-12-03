@@ -7,7 +7,7 @@ import LandingPage from './components/LandingPage';
 import IdFilm from './components/IdFilm';
 
 class App extends Component {
-    render() {
+render() {
         return (
             <Router>
                 <Fragment>
@@ -18,8 +18,9 @@ class App extends Component {
                     </nav>
                     <Switch>
                         <Route exact path="/" component={LandingPage} />
-                        <Route path="/FilmPage" component={FilmPage} />
-                        <Route path="/PeoplePage" component={PeoplePage} />
+                        <Route exact path="/FilmPage" component={FilmPage} />
+                        <Route path="/Flick/:id" component={IdFilm} />
+                        <Route exact path="/PeoplePage" component={PeoplePage} />
                     </Switch>
                 </Fragment>
             </Router>

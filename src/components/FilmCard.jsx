@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import IdFilm from './IdFilm';
+import { Link } from 'react-router-dom';
 
 class FilmCard extends Component {
     showPreview(x) {
@@ -14,12 +13,7 @@ class FilmCard extends Component {
                     <div className="card shadow p-1">
                         <h3>{i.title}</h3>
                         <p>{this.showPreview(i.description)}...</p>
-                        <Router>
-                            <Link to="/flick"><button className="btn btn-info">More Info</button></Link>
-                            <Switch>
-                                <Route exact path="/flick" component={IdFilm} />
-                            </Switch>
-                        </Router>
+                        <Link to={`/flick/${i.id}`}><button className="btn btn-info">More Info</button></Link>
                     </div>
                 </div>
             </>
