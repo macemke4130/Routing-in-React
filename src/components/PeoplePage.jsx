@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PeopleCard from './PeopleCard';
+import Loading from './Loading';
 
 class PeoplePage extends Component {
     state = {
-        peopleList: []
+        peopleList: [],
+        hasLoaded: false
     };
 
     componentDidMount() {
@@ -16,6 +18,7 @@ class PeoplePage extends Component {
             .then(returnedPeople => {
                 this.setState({
                     peopleList: returnedPeople,
+                    hasLoaded: true
                 });
             }).catch(err => {
                 console.log(err);
@@ -23,14 +26,18 @@ class PeoplePage extends Component {
     }
 
     render() {
-        return (
-            <>
-                <div className="nav-fix"></div>
-                <div className="row justify-content-center">
-                    <PeopleCard peopleList={this.state.peopleList} />
-                </div>
-            </>
-        )
+        if (this.state.hasLoaded) {
+            return (
+                <>
+                    <div className="nav-bump"></div>
+                    <div className="row justify-content-center">
+                        <PeopleCard peopleList={this.state.peopleList} />
+                    </div>
+                </>
+            )
+        } else {
+            return (<Loading />)
+        }
     }
 }
 

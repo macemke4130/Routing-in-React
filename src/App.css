@@ -27,7 +27,7 @@ button {
     margin: 8px;
 }
 
-.nav-fix {
+.nav-bump {
     height: 3rem;
 }
 
@@ -37,3 +37,22 @@ button {
     flex-direction: column;
     align-items: center;
 }
+
+.spin-me {
+    animation: spin 3s infinite;
+    animation-timing-function: linear;
+}
+
+.loading-page {
+    height: 75vh;
+    flex-direction: column;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
